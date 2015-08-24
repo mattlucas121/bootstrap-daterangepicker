@@ -265,6 +265,10 @@
                 this.showDropdowns = options.showDropdowns;
             }
 
+            if (typeof options.showYear === 'boolean') {
+                this.showYear = options.showYear;
+            }
+
             if (typeof options.singleDatePicker === 'boolean') {
                 this.singleDatePicker = options.singleDatePicker;
                 if (this.singleDatePicker) {
