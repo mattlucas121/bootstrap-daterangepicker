@@ -123,6 +123,7 @@
             this.maxDate = false;
             this.dateLimit = false;
 
+            this.showYear = true;
             this.showDropdowns = false;
             this.showWeekNumbers = false;
             this.timePicker = false;
@@ -1128,7 +1129,12 @@
                 dateHtml = this.renderDropdowns(calendar[1][1], minDate, maxDate);
             }
 
-            html += '<th colspan="5" class="month">' + dateHtml + '</th>';
+            if (this.showYear) {
+                html += '<th colspan="5" class="month">' + dateHtml + '</th>';
+            } else {
+                html += '<th colspan="5" class="month">' + dateHtml.split(' ')[0] + '</th>';
+            }
+
             if (!maxDate || maxDate.isAfter(calendar.lastDay)) {
                 html += '<th class="next available"><i class="fa fa-arrow-right icon icon-arrow-right glyphicon glyphicon-arrow-right"></i></th>';
             } else {
