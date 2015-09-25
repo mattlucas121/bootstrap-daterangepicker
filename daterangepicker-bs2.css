@@ -32,6 +32,11 @@
   float: left;
 }
 
+
+.ranges .range_inputs {
+  padding-bottom: 12px;
+}
+
 .daterangepicker .ranges .range_inputs>div:nth-child(2) {
   padding-left: 11px;
 }

@@ -367,7 +367,7 @@
                 list += '<li>' + this.locale.customRangeLabel + '</li>';
                 list += '</ul>';
                 this.container.find('.ranges ul').remove();
-                this.container.find('.ranges').prepend(list);
+                this.container.find('.ranges').append(list);
             }
 
             if (typeof callback === 'function') {
